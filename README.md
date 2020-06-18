@@ -1,4 +1,4 @@
-# erickbmr.github.io
+## Personal website
 
-Personal website
-Html and CSS
+https://erickbmr.github.io/
+
