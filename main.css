@@ -1,0 +1,43 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: sans-serif;
+}
+
+.container
+{
+    max-width: 750px;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact
+{
+    margin-right: 11px;
+    border-right: 2px solid;
+    box-shadow: #000000;
+}
+
+.contact img
+{
+    margin-bottom: 10px;    
+}
+
+.bio
+{
+    margin-left: 10px;   
+}
+
+footer
+{
+    text-align: center;
+    font-size: 12px;
+    color: #868686;
+}
