@@ -2,5 +2,12 @@
   "bio": "Engenheiro de Software especializado em .NET, React e TypeScript, com experiência em sistemas que processam milhões de requisições diárias. Atuei em soluções de marketing orientado a dados, conformidade com LGPD/GDPR e automação de fluxos com IA. Trabalho com cloud (AWS, Azure), containers, mensageria e bancos relacionais e não relacionais.",
   "education": "Graduado em Sistemas de Informação pelo IFMG | 2019 - 2023",
   "educationPostgrad": "Pós-graduando em Arquitetura de Software Distribuído pela PUC Minas | 2025 - 2026",
-  "footer": "ERICK MOREIRA © coding since 2018"
+  "footer": "ERICK MOREIRA © coding since 2018",
+  "activities": {
+    "programming": "Programação",
+    "ai": "Inteligência Artificial",
+    "data": "Dados",
+    "computerScience": "Ciência da Computação",
+    "mathematics": "Matemática"
+  }
 }
