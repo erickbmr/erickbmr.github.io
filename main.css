@@ -22,7 +22,7 @@ body
 .contact
 {
     margin-right: 11px;
-    border-right: 2px solid #1a4480;
+    border-right: 2px solid #0d2b5e;
     box-shadow: #000000;
 }
 
@@ -38,12 +38,12 @@ body
 
 a
 {
-    color: #1a4480;
+    color: #0d2b5e;
 }
 
 footer
 {
     text-align: center;
     font-size: 12px;
-    color: #1a4480;
+    color: #0d2b5e;
 }
