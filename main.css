@@ -33,7 +33,13 @@ body
 
 .bio
 {
-    margin-left: 10px;   
+    margin-left: 10px;
+}
+
+.bio-education
+{
+    color: #5a7db5;
+    margin-top: 8px;
 }
 
 a
