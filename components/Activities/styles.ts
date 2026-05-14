@@ -1,4 +1,9 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+const fadeIn = keyframes`
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+`
 
 export const ActivitiesWrapper = styled.div`
   position: fixed;
@@ -9,7 +14,7 @@ export const ActivitiesWrapper = styled.div`
   gap: 8px;
 `
 
-export const ActivityItem = styled.div`
+export const ActivityItem = styled.div<{ $revealed?: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
@@ -17,6 +22,10 @@ export const ActivityItem = styled.div`
   &:hover > span {
     display: block;
   }
+
+  ${({ $revealed }) => $revealed && css`
+    animation: ${fadeIn} 0.4s ease;
+  `}
 `
 
 export const CircleIcon = styled.div`
