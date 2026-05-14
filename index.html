@@ -3,11 +3,11 @@
 <html lang="pt-BR">
 
     <head>
-        
+
         <meta charset="utf-8">
         <title>Erick Moreira</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
             crossorigin="anonymous">
         <link rel="stylesheet" href="main.css">
         <link rel="icon" href="assets/mouse.png">
@@ -15,6 +15,11 @@
     </head>
 
     <body>
+
+        <div class="lang-switcher">
+            <button onclick="setLanguage('pt')" id="btn-pt" class="lang-btn active" title="Português">PT</button>
+            <button onclick="setLanguage('en')" id="btn-en" class="lang-btn" title="English">EN</button>
+        </div>
 
         <div class="container">
 
@@ -32,7 +37,7 @@
                     <img src="/assets/telegram.svg" width="40px" alt="telegram">
                 </a>
 
-                <a href="https://wa.me/5531984693967?text=Ol%C3%A1%2C%20vi%20seu%20site%20pessoal%20e%20gostaria%20de" target="_blank">
+                <a id="whatsapp-link" href="https://wa.me/5531984693967?text=Ol%C3%A1%2C%20vi%20seu%20site%20pessoal%20e%20gostaria%20de" target="_blank">
                     <img src="/assets/whatsapp.svg" width="40px" alt="whatsapp">
                 </a>
 
@@ -41,14 +46,14 @@
             <div class="bio">
 
                 <h2>Erick Moreira</h2>
-                <p>
+                <p data-i18n="bio">
                     Engenheiro de Software especializado em .NET, React e TypeScript,
                     com experiência em sistemas que processam milhões de requisições diárias.
                     Atuei em soluções de marketing orientado a dados, conformidade com LGPD/GDPR
                     e automação de fluxos com IA. Trabalho com cloud (AWS, Azure), containers,
                     mensageria e bancos relacionais e não relacionais.
                 </p>
-                <p class="bio-education">
+                <p class="bio-education" data-i18n="education">
                     Graduado em Sistemas de Informação pelo IFMG | 2019 - 2023<br>
                     Pós-graduando em Arquitetura de Software Distribuído pela PUC Minas | 2025 - 2026
                 </p>
@@ -57,8 +62,36 @@
         </div>
 
         <footer>
-            <p>ERICK MOREIRA © coding since 2018</p>
+            <p data-i18n="footer">ERICK MOREIRA © coding since 2018</p>
         </footer>
+
+        <script>
+            const translations = {
+                pt: {
+                    bio: 'Engenheiro de Software especializado em .NET, React e TypeScript, com experiência em sistemas que processam milhões de requisições diárias. Atuei em soluções de marketing orientado a dados, conformidade com LGPD/GDPR e automação de fluxos com IA. Trabalho com cloud (AWS, Azure), containers, mensageria e bancos relacionais e não relacionais.',
+                    education: 'Graduado em Sistemas de Informação pelo IFMG | 2019 - 2023<br>Pós-graduando em Arquitetura de Software Distribuído pela PUC Minas | 2025 - 2026',
+                    footer: 'ERICK MOREIRA © coding since 2018',
+                    whatsapp: 'Ol%C3%A1%2C%20vi%20seu%20site%20pessoal%20e%20gostaria%20de'
+                },
+                en: {
+                    bio: 'Software Engineer specialized in .NET, React and TypeScript, with experience in systems processing millions of daily requests. I have worked on data-driven marketing, LGPD/GDPR compliance and AI-powered workflow automation. I work with cloud (AWS, Azure), containers, messaging and relational and non-relational databases.',
+                    education: 'BSc in Information Systems, IFMG | 2019 - 2023<br>Postgraduate in Distributed Software Architecture, PUC Minas | 2025 - 2026',
+                    footer: 'ERICK MOREIRA © coding since 2018',
+                    whatsapp: 'Hello%2C%20I%20saw%20your%20personal%20website%20and%20I%27d%20like%20to'
+                }
+            };
+
+            function setLanguage(lang) {
+                const t = translations[lang];
+                document.querySelector('[data-i18n="bio"]').innerHTML = t.bio;
+                document.querySelector('[data-i18n="education"]').innerHTML = t.education;
+                document.querySelector('[data-i18n="footer"]').innerHTML = t.footer;
+                document.getElementById('whatsapp-link').href = 'https://wa.me/5531984693967?text=' + t.whatsapp;
+                document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+                document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+                document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en-UK';
+            }
+        </script>
 
     </body>
 

@@ -47,6 +47,39 @@ a
     color: #0d2b5e;
 }
 
+.lang-switcher
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn
+{
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    opacity: 0.35;
+    transition: opacity 0.2s;
+    padding: 0;
+    line-height: 1;
+}
+
+.lang-btn.active
+{
+    opacity: 1;
+}
+
+.lang-btn:hover
+{
+    opacity: 0.75;
+}
+
 footer
 {
     text-align: center;
