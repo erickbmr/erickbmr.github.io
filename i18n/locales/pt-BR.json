@@ -16,5 +16,12 @@
     "mathematics": "Matemática",
     "swimming": "Natação",
     "chef": "Culinária"
+  },
+  "projects": {
+    "pageTitle": "Projetos",
+    "backAriaLabel": "Voltar para o início"
+  },
+  "contact": {
+    "projectsAriaLabel": "Meus Projetos"
   }
 }

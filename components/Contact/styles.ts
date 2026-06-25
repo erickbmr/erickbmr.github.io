@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 export const ContactWrapper = styled.div`
   display: flex;
@@ -9,6 +10,19 @@ export const ContactWrapper = styled.div`
 `
 
 export const IconLink = styled.a`
+  display: block;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+  }
+`
+
+export const InternalIconLink = styled(Link)`
   display: block;
   margin-bottom: 10px;
 

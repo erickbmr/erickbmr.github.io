@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "name": "Project Alpha",
+      "imageUrl": "https://placehold.co/400x200",
+      "description": "A short description of what Project Alpha does and the problem it solves."
+    },
+    {
+      "name": "Project Beta",
+      "imageUrl": "https://placehold.co/400x200",
+      "description": "A short description of what Project Beta does and the problem it solves."
+    },
+    {
+      "name": "Project Gamma",
+      "imageUrl": "https://placehold.co/400x200",
+      "description": "A short description of what Project Gamma does and the problem it solves."
+    }
+  ]
+}
