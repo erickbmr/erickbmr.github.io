@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { ContactWrapper, IconLink } from './styles'
+import { useTranslation } from 'react-i18next'
+import { ContactWrapper, IconLink, InternalIconLink } from './styles'
 
 const STATIC_LINKS = [
   { href: 'https://github.com/erickbmr', src: '/assets/github.svg', alt: 'github' },
@@ -10,6 +11,8 @@ const STATIC_LINKS = [
 ]
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
     <ContactWrapper>
       {STATIC_LINKS.map(({ href, src, alt }) => (
@@ -17,6 +20,9 @@ export default function Contact() {
           <Image src={src} width={40} height={40} alt={alt} />
         </IconLink>
       ))}
+      <InternalIconLink href="/projects" aria-label={t('contact.projectsAriaLabel')}>
+        <Image src="/assets/folder.svg" width={40} height={40} alt="projects" />
+      </InternalIconLink>
     </ContactWrapper>
   )
 }
