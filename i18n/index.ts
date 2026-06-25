@@ -9,8 +9,8 @@ if (!i18n.isInitialized) {
       pt: { translation: ptBR },
       en: { translation: enUK },
     },
-    lng: 'pt',
-    fallbackLng: 'pt',
+    lng: 'en',
+    fallbackLng: 'en',
     interpolation: { escapeValue: false },
   })
 }

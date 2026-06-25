@@ -5,8 +5,8 @@ import i18n from '@/i18n'
 import { SwitcherWrapper, LangButton } from './styles'
 
 const LANGUAGES: { code: Lang; label: string }[] = [
-  { code: 'pt', label: 'PT' },
   { code: 'en', label: 'EN' },
+  { code: 'pt', label: 'PT' },
 ]
 
 export default function LanguageSwitcher() {
